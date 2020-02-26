@@ -4,12 +4,12 @@ import TestComponent from '../component/TestComponent'
 import React from 'react'
 
 
-const TestContainer =(region) =>{
+const TestContainer =({data,board}) =>{
 
 
 return(
 
-    <TestComponent region={region}>
+    <TestComponent data={data} board={board}>
 
     </TestComponent>
 
@@ -19,9 +19,11 @@ return(
 }
 
 export default connect(
-
-    (state)=>{
-
-
+    
+    (state)=>({
+       data:state.data
+       
+    }),{
+         board
     }
-)
+)(TestContainer);

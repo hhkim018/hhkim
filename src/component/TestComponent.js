@@ -1,13 +1,12 @@
 import React from 'react'
 
-const TestComponent=(region)=>{
+const TestComponent=({data,board})=>{
 
 
 return(
     <div>
-    {region.map(result=>(
-<span>result.REGION_CD</span>
-    ))}
+<button onClick={board}>00</button>
+
     </div>
     
     )
