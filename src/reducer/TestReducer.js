@@ -6,21 +6,26 @@ const view ='reducer/view'
 
 //
 
-export const board=
-() => ({type:view,
-    data:{
-    REGION_CD:'11',
-    A_RING_8_PHASE_VAL:'11',
-    INT_PLAN_NO:'11'
-}})
+export const board=createAction(view,api.getBoard());
 
-console.info(">>>>>",api.getBoard)
+// () => ({type:view,
+//     data:{
+//     REGION_CD:'11',
+//     A_RING_8_PHASE_VAL:'11',
+//     INT_PLAN_NO:'11'
+// }})
+
+console.info(">>>>>",api.getBoard())
 
 const inital = {
     data:[{
-        REGION_CD:'1',
-        A_RING_8_PHASE_VAL:'1',
-        INT_PLAN_NO:'1'
+        indsLclsCd : "",
+        indsLclsNm : "",
+        indsMclsCd : "",
+        indsMclsNm : "",
+        indsSclsCd : "",
+        indsSclsNm : "",
+        stdrDt : "",
 }]
 }
 
